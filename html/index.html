@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screenshot Viewer</title>
+
+    <link rel="stylesheet" href="../css/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="side-panel" class="panel">
+      <div id="color-box" style="background-color: #ffffff"></div>
+      <span title="Click to copy" class="color-value" id="hex-color-value"
+        >#FFFFFF</span
+      >
+      <span title="Click to copy" class="color-value" id="rgb-color-value"
+        >rgb(255, 255, 255)</span
+      >
+      <span title="Click to copy" class="color-value" id="hsl-color-value"
+        >hsl(0, 0%, 100%)</span
+      >
+      <span title="Click to copy" class="color-value" id="hwb-color-value"
+        >hwb(0 100% 0%)</span
+      >
+
+      <div
+        id="shade-complement-section"
+        style="display: none; margin-top: 20px"
+      >
+        <h5>Color Suggestions</h5>
+        <div id="lighter-shades" class="row-container">
+          <h6>Lighter Shades</h6>
+          <div class="shade-row"></div>
+        </div>
+        <div id="darker-shades" class="row-container">
+          <h6>Darker Shades</h6>
+          <div class="shade-row"></div>
+        </div>
+        <div id="complementary-colors" class="row-container">
+          <h6>Complementary Colors</h6>
+          <div class="shade-row"></div>
+        </div>
+      </div>
+      <div
+        id="copy-message"
+        class="alert alert-success"
+        style="display: none"
+        role="alert"
+      ></div>
+
+      <div id="button-button-group">
+        <div id="action-button-group">
+          <button id="reset-button" class="btn btn-outline-success btn-sm">
+            Reset
+          </button>
+          <button id="save-button" class="btn btn-success btn-sm">Save</button>
+        </div>
+        <button id="show-saved-colors-button" class="btn btn-success btn-sm">
+          Saved Colors
+        </button>
+      </div>
+    </div>
+    <div id="saved-colors-panel" class="panel" style="display: none">
+      <h5>Saved Colors</h5>
+      <div id="saved-colors-list"></div>
+      <div id="saved-colors-button-group">
+        <button id="return-button" class="btn btn-success btn-sm">
+          Return
+        </button>
+        <button id="clear-saved-button" class="btn btn-outline-success btn-sm">
+          Clear
+        </button>
+      </div>
+    </div>
+
+    <div id="image-container">
+      <div id="magnifier">
+        <img id="magnifier-image" alt="Zoomed Area" />
+        <div id="magnifier-center"></div>
+      </div>
+      <img id="screenshot" alt="Screenshot" />
+    </div>
+
+    <script type="module" src="../js/index.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
